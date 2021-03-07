@@ -14,18 +14,14 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
 router.get('/', (_req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, '..', 'assets', 'disk_strage.html'));
 });
 
-router.post(
-  '/',
-  upload.array('upfile'),
-  (req: Request, res: Response) => {
-    console.log(req.files);
-    console.log(req.body);
-    res.status(204).end();
-  }
-);
+router.post('/', upload.array('upfile'), (req: Request, res: Response) => {
+  console.log(req.files);
+  console.log(req.body);
+  res.status(204).end();
+});

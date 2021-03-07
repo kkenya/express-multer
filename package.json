@@ -5,17 +5,25 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --inspect -- src/app.ts",
-    "build": "tsc",
+    "start": "node src/app.js",
+    "prof": "npm run build && NODE_ENV=production node --prof dist/src/app.js",
+    "build": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fix": "prettier --write './src/**/*.ts'"
+    "fix": "prettier --write './src/**/*.ts'",
+    "gen:csv": "ts-node-dev csv/gen.ts > csv/test.csv"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.11",
+    "@types/faker": "^5.1.7",
     "@types/multer": "^1.4.5",
     "@types/node": "^14.14.31",
+    "csv-generate": "^3.3.0",
+    "csv-parse": "^4.15.3",
+    "csv-writer": "^1.6.0",
+    "faker": "^5.4.0",
     "prettier": "2.2.1",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3"
