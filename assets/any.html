@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>single input multiple</title>
+    <title>any</title>
   </head>
   <body>
-    <form action="/simple/single_multi_file" enctype="multipart/form-data" method="post">
+    <form action="/simple/any" enctype="multipart/form-data" method="post">
       <div class="form-group">
-        <input type="file" class="form-control-file" name="photos" multiple />
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Number of speakers"
-          name="nspeakers"
-        />
+        <input type="file" class="form-control-file" name="avatar" multiple />
+        <input type="file" class="form-control-file" name="gallery" multiple />
         <input
           type="submit"
           value="Get me the stats!"
@@ -25,3 +20,4 @@
     </form>
   </body>
 </html>
+
