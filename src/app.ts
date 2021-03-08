@@ -1,7 +1,8 @@
 import express, { Router } from 'express';
 import { router as simpleRouter } from './simple';
 import { router as diskStrageRouter } from './disk_strage';
-import {router as memoryStrage}from './memory_strage'
+import { router as memoryStrageRouter } from './memory_strage';
+import { router as streamRouter } from './stream';
 
 const app = express();
 const router = Router();

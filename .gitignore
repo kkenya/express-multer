@@ -1,4 +1,7 @@
 node_modules
 
+# transpile output
+dist
+
 # multer uploaded files
 uploads
