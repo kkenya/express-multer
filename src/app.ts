@@ -11,7 +11,8 @@ const port = 3000;
 app.use(router);
 router.use('/simple', simpleRouter);
 router.use('/disk_strage', diskStrageRouter);
-router.use('/memory_strage', memoryStrage);
+router.use('/memory_strage', memoryStrageRouter);
+router.use('/stream', streamRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
